@@ -92,7 +92,7 @@ RICHTEXT_FILTERS=()
 
 # Hosts/domain names that are valid for this site; required if DEBUG is False
 # See https://docs.djangoproject.com/en/dev/ref/settings/#allowed-hosts
-ALLOWED_HOSTS = ["soilhealthscores.com"]
+ALLOWED_HOSTS = [".soilhealthscores.com",".managingwholes.com"]
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -124,6 +124,9 @@ DEBUG = False
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SITE_ID = 1
+
+HOST_THEMES = [('managingwholes.com','mwtheme'),
+            ('soilhealthscores.com','scctheme')]
 
 # If you set this to False, Django will make some optimizations so as not
 # to load the internationalization machinery.
@@ -199,10 +202,8 @@ TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
         "DIRS": [
-            #os.path.join(PROJECT_ROOT, "nova/templates"),
-            os.path.join(PROJECT_ROOT, "mwtheme/templates"),
-            #os.path.join(PROJECT_ROOT, "moderna/templates"),            
-            #os.path.join(PROJECT_ROOT, "solid/templates"),
+            #os.path.join(PROJECT_ROOT, "mwtheme/templates"),
+            #os.path.join(PROJECT_ROOT, "scctheme/templates"),            
             os.path.join(PROJECT_ROOT, "templates")
         ],
         "APP_DIRS": True,
@@ -255,10 +256,8 @@ INSTALLED_APPS = (
     "mezzanine.twitter",
     # "mezzanine.accounts",
     # "mezzanine.mobile",
-    #"moderna",
-    #"solid",
     "mwtheme",
-    #"nova",  
+    "scctheme",  
 )
 
 # List of middleware classes to use. Order is important; in the request phase,
