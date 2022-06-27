@@ -28,7 +28,7 @@ jupyter-core==4.4.0
 MarkupSafe==1.0
 Mezzanine==4.2.3
 mistune==0.8.3
-mysql-connector-python==8.0.5
+mysql-connector-python==8.0.14
 nbconvert==5.3.1
 nbformat==4.4.0
 notebook==5.2.2
